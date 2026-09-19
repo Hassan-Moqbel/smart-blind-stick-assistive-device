@@ -85,7 +85,7 @@ Where:
 5. Compile and Upload the firmware.
 
 ## Authentic Documentation & Historical Asset Links
-- **Project Report**: [`docs/A Smart Blind Stick using Arduino_حسن مقبل(1).pdf`](docs/)
+- **Project Report**: [`docs/Smart_Blind_Stick_Assistive_Device_Report.pdf`](docs/)
 - **Evidence Classification**: Due to missing original `.ino` files, the firmware logic is officially marked **[RECONSTRUCTED]** based strictly on the parameters documented in the verified PDF.
 
 ## Engineering Audit & Defensibility Limitations
