@@ -36,8 +36,8 @@ The HC-SR04 sensor operates on the principle of echolocation. The microcontrolle
 $$ d = \frac{v \times t}{2} $$
 Where:
 - $d$ = Distance to the object in cm.
-- $v$ = Speed of sound in air at 20°C ($\approx 343 \text{ m/s}$ or $0.0343 \text{ cm/\mu s}$).
-- $t$ = Echo pulse duration in $\mu s$.
+- $v$= Speed of sound in air at 20°C ($\approx 343 \text{ m/s}$or$0.0343 \text{ cm/\mu s}$).
+- $t$= Echo pulse duration in$\mu s$.
 
 ## Hardware Bill of Materials (BOM)
 | Component | Specification | Quantity |
