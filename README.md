@@ -18,25 +18,25 @@ Blindness and visual impairment significantly impact independent mobility and na
 
 ## System Architecture
 
-```mermaid
+mermaid
 flowchart TD
-    BAT[300mAh Li-ion Battery] -->|Power| TP4056[TP4056 Charge Module]
-    TP4056 -->|5V Bus| MCU[Arduino Nano / Uno]
-    MCU -->|Trigger 10µs| HC[HC-SR04 Ultrasonic Sensor]
+    BAT["300mAh Li-ion Battery"] -->|Power| TP4056["TP4056 Charge Module"]
+    TP4056 -->|5V Bus| MCU["Arduino Nano / Uno"]
+    MCU -->|Trigger 10µs| HC["HC-SR04 Ultrasonic Sensor"]
     HC -->|Echo PWM| MCU
-    MCU -->|Digital Out| BUZZ[Active Buzzer]
-    MCU -->|Digital Out| NPN[NPN Transistor Driver]
-    NPN --> VIB[Coin Vibration Motor]
-```
+    MCU -->|Digital Out| BUZZ["Active Buzzer"]
+    MCU -->|Digital Out| NPN["NPN Transistor Driver"]
+    NPN --> VIB["Coin Vibration Motor"]
+
 
 ## Theoretical & Mathematical Models
 
 ### Ultrasonic Distance Calculation
 The HC-SR04 sensor operates on the principle of echolocation. The microcontroller sends a 10µs trigger pulse, causing the sensor to emit an 8-cycle sonic burst at 40kHz. The duration $t$ of the returning echo pulse is measured.
-$$ d = \frac{v \times t}{2} $$
+$$ d = \frac{"v \times t"}{2} $$
 Where:
 - $d$ = Distance to the object in cm.
-- $v$ = Speed of sound in air at 20°C ($\approx 343 \text{ m/s}$ or $0.0343 \text{ cm/\mu s}$).
+- $v$ = Speed of sound in air at 20°C ($\approx 343 \text{" m/s"}$ or $0.0343 \text{" cm/\mu s"}$).
 - $t$ = Echo pulse duration in $\mu s$.
 
 ## Hardware Bill of Materials (BOM)
@@ -73,7 +73,7 @@ Where:
 ```
 
 ## Step-by-Step Firmware Setup & Prerequisites
-1. Download and install the [Arduino IDE](https://www.arduino.cc/en/software).
+1. Download and install the ["Arduino IDE"](https://www.arduino.cc/en/software).
 2. Open the project firmware at `firmware/smart_blind_stick.ino`.
 3. Connect the Arduino board to your computer via USB.
 4. Select the appropriate target board (e.g., **Arduino Nano**) and COM port under `Tools`.
