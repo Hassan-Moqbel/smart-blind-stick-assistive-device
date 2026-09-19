@@ -32,12 +32,17 @@ flowchart TD
 ## Theoretical & Mathematical Models
 
 ### Ultrasonic Distance Calculation
-The HC-SR04 sensor operates on the principle of echolocation. The microcontroller sends a 10µs trigger pulse, causing the sensor to emit an 8-cycle sonic burst at 40kHz. The duration $t$ of the returning echo pulse is measured.
-$$ d = \frac{v \times t}{2} $$
+
+The HC-SR04 sensor operates on the principle of echolocation (Time-of-Flight). The microcontroller initiates ranging by sending a $10\ \mu\text{s}$ trigger pulse, causing the sensor to emit an 8-cycle sonic burst at $40\text{ kHz}$. The round-trip duration ($t$) of the returning echo pulse is measured:
+
+$$
+d = \frac{v \cdot t}{2}
+$$
+
 Where:
-- $d$ = Distance to the object in cm.
-- $v$= Speed of sound in air at 20°C ($\approx 343 \text{ m/s}$or$0.0343 \text{ cm/\mu s}$).
-- $t$= Echo pulse duration in$\mu s$.
+- $d$: Distance to the target obstacle $[\text{cm}]$.
+- $v$: Speed of sound in air at 20°C ($v \approx 343\text{ m/s} = 0.0343\text{ cm}/\mu\text{s}$).
+- $t$: Echo pulse duration $[\mu\text{s}]$.
 
 ## Hardware Bill of Materials (BOM)
 | Component | Specification | Quantity |
@@ -94,4 +99,4 @@ Mechatronics Engineer | Mechanical Design & CAD (SolidWorks & AutoCAD) | Prevent
 [GitHub](https://github.com/Hassan-Moqbel) · [Facebook](https://www.facebook.com/share/1BqxAgVjHi/) · [LinkedIn](https://www.linkedin.com/in/hassan-moqbel)
 
 ## License
-This project is licensed under the GPL-2.0 License.
+This project is licensed under the [MIT License](LICENSE).
